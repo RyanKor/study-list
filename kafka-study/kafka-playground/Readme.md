@@ -27,3 +27,7 @@
 - topic create
 
 ![topic_create](./img/topic_create.png)
+
+## 3. Kafka Performance Test
+
+- [Performance Test Directory](./performance-test/Readme.md)

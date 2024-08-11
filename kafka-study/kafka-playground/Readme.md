@@ -1,6 +1,33 @@
 # Kafka Setup with Docker compose
 
-## 1. How to Run
+## 1. Project Tree
+```
+.
+├── docker-compose.yml
+├── img
+│   ├── broker_info.png
+│   ├── broker.png
+│   ├── claude_answer1.png
+│   ├── docker-compose.png
+│   ├── docker_stat1.png
+│   ├── docker_stat2.png
+│   ├── topic_create.png
+│   └── topic_list.png
+├── performance-test
+│   ├── 2024-08-03-test.md
+│   └── Readme.md
+├── Readme.md
+├── requirements.txt
+├── scripts
+│   ├── confluent_kafka_test.py
+│   ├── kafka_perf_test.py
+│   ├── __pycache__
+│   │   └── confluent_kafka.cpython-39.pyc
+│   └── py_kafka.py
+```
+
+
+## 2. How to Run
 
 - Run the command below
 
@@ -14,7 +41,7 @@
 
 ![ui-image](./img/broker.png)
 
-## 2. Basic Function of Kafka
+## 3. Basic Function of Kafka
 
 - see broker info in the UI
 
@@ -28,6 +55,6 @@
 
 ![topic_create](./img/topic_create.png)
 
-## 3. Kafka Performance Test
+## 4. Kafka Performance Test
 
 - [Performance Test Directory](./performance-test/Readme.md)

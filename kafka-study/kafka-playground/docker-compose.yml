@@ -22,7 +22,13 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
-
+      KAFKA_HEAP_OPTS: "-Xmx5G -Xms5G"
+      KAFKA_OPTS: "-XX:MaxDirectMemorySize=5G"
+      KAFKA_LOG_SEGMENT_BYTES: 1073741824
+      KAFKA_LOG_RETENTION_HOURS: 1
+    #   KAFKA_LOG_DIRS: /mnt/hdd/kafka-logs
+    # volumes:
+    #   - /mnt/hdd/kafka1:/mnt/hdd/kafka-logs
   kafka2:
     image: confluentinc/cp-kafka:latest
     depends_on:
@@ -37,7 +43,13 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
-
+      KAFKA_HEAP_OPTS: "-Xmx5G -Xms5G"
+      KAFKA_OPTS: "-XX:MaxDirectMemorySize=5G"
+      KAFKA_LOG_SEGMENT_BYTES: 1073741824
+      KAFKA_LOG_RETENTION_HOURS: 1
+    #   KAFKA_LOG_DIRS: /mnt/hdd/kafka-logs
+    # volumes:
+    #   - /mnt/hdd/kafka2:/mnt/hdd/kafka-logs
   kafka3:
     image: confluentinc/cp-kafka:latest
     depends_on:
@@ -52,7 +64,13 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
-
+      KAFKA_HEAP_OPTS: "-Xmx5G -Xms5G"
+      KAFKA_OPTS: "-XX:MaxDirectMemorySize=5G"
+      KAFKA_LOG_SEGMENT_BYTES: 1073741824
+      KAFKA_LOG_RETENTION_HOURS: 1
+    #   KAFKA_LOG_DIRS: /mnt/hdd/kafka-logs
+    # volumes:
+    #   - /mnt/hdd/kafka3:/mnt/hdd/kafka-logs
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
     ports:
